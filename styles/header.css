@@ -1,1 +1,23 @@
-.header {}
+.header {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .pills {
+    display: flex;
+}
+
+.header .pills .pill {
+    background-color: #323F4B;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.header .pills .download-resume {
+    color: #E4E7EB;
+    text-decoration: none;
+}
