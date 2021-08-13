@@ -1,0 +1,19 @@
+.section-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;    
+}
+.section-1 .profile-picture {
+    flex: 1;
+}
+
+.section-1 .profile-picture img {
+    width: 100px;
+    height: 100px;
+}
+
+.section-1 .bio  {
+    line-height: 16px;
+    flex: 11;
+}

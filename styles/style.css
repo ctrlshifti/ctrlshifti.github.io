@@ -1,0 +1,40 @@
+body {
+    background-color: #121212;
+    margin: 0;
+    font-family: sans-serif;
+    color: #E4E7EB;
+}
+.padding {
+    padding: 32px;
+}
+
+.padding-left {
+    padding-left: 32px;
+}
+.padding-bottom {
+    padding-bottom: 32px;
+}
+.padding-bottom-2 {
+    padding-bottom: 64px;
+}
+
+.padding-bottom-4 {
+    padding-bottom: 128px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.primary-bg {
+    background-color: #1F2933;
+}
+
+.border-square {
+    border-radius: 10px;
+}
+
+.border-circle {
+    border-radius: 50%;
+}

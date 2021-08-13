@@ -1,0 +1,28 @@
+.grid-section {
+    line-height: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-section .section-title {
+    text-align: center;
+}
+.grid-section .card-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.grid-section .card {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.grid-section .card img {
+    display: flex;
+    flex: 1;
+    max-height: 100px;
+    max-width: 150px;
+    align-self: center;
+}
