@@ -40,9 +40,10 @@ function copyToClipBoard(str) {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
-    gtag('event', 'MobileNumberOrEmailCopied', {
+    var event = (str === 'mejac279@gmail.com') ? 'EmailCopied' : 'MobileNumberCopied'
+    gtag('event', event, {
         'event_category' : 'header_footer_actions',
-        'event_label' : 'MobileNumberOrEmailCopied'
+        'event_label' : event
     });                 
     alert("Copied !!!")
 }
