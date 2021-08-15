@@ -8,6 +8,7 @@ function addMobileFooterTextBoxPanel() {
     textBoxPanel.content.firstChild.style.display = 'none'
     document.querySelector(".footer.mobile-only.primary-bg").prepend(textBoxPanel.content.firstChild)
 }
+
 function onFooterItemClick(option) {
     var textBoxContainer = document.querySelector(".footer .text-box-container")
     textBoxContainer.style.display = 'none'
@@ -15,10 +16,12 @@ function onFooterItemClick(option) {
         case 'email':
         document.getElementById('emailContactBox').value = 'MEJAC279@GMAIL.COM'
         textBoxContainer.style.display = 'flex'
+        ga('send', 'event', 'Actions', 'Email', 'Viewed');
         break;
         case 'phone':
         document.getElementById('emailContactBox').value = '+91 8105275714'
         textBoxContainer.style.display = 'flex'
+        ga('send', 'event', 'Actions', 'MobilNumber', 'Viewed');
         break;        
     }
 }
@@ -31,7 +34,12 @@ function copyToClipBoard(str) {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
+    ga('send', 'event', 'Actions', 'MobilNumberOrEmail', 'Copied');
     alert("Copied !!!")
-};
+}
+
+function trackResumedDownload() {
+    ga('send', 'event', 'Actions', 'ResumeDownloaded', 'linkClicked');
+}
 
 addMobileFooterTextBoxPanel()
