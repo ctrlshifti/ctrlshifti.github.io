@@ -22,13 +22,16 @@ function onFooterItemClick(option) {
         break;        
     }
 }
-function copyToClipBoard(value) {
-    if(value) {
-        document.getElementById('emailContactBox').value = value
-    }
-    document.getElementById('emailContactBox').select();
-    document.getElementById('emailContactBox').setSelectionRange(0, 99999);
-    document.execCommand("copy");
+
+const copyToClipboard = str => {
+    str = str || document.getElementById('emailContactBox').value
+    const el = document.createElement('textarea');
+    el.value = str;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
     alert("Copied !!!")
-}
+};
+
 addMobileFooterTextBoxPanel()
