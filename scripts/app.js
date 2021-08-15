@@ -16,12 +16,18 @@ function onFooterItemClick(option) {
         case 'email':
         document.getElementById('emailContactBox').value = 'MEJAC279@GMAIL.COM'
         textBoxContainer.style.display = 'flex'
-        gtag('send', 'event', 'Actions', 'Email', 'Viewed');
+        gtag('event', 'emailViewed', {
+            'event_category' : 'header_footer_actions',
+            'event_label' : 'emailViewed'
+        });        
         break;
         case 'phone':
         document.getElementById('emailContactBox').value = '+91 8105275714'
         textBoxContainer.style.display = 'flex'
-        gtag('send', 'event', 'Actions', 'MobilNumber', 'Viewed');
+        gtag('event', 'mobileNumberViewed', {
+            'event_category' : 'header_footer_actions',
+            'event_label' : 'mobileNumberViewed'
+        });                
         break;        
     }
 }
@@ -34,12 +40,18 @@ function copyToClipBoard(str) {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
-    gtag('send', 'event', 'Actions', 'MobilNumberOrEmail', 'Copied');
+    gtag('event', 'MobileNumberOrEmailCopied', {
+        'event_category' : 'header_footer_actions',
+        'event_label' : 'MobileNumberOrEmailCopied'
+    });                 
     alert("Copied !!!")
 }
 
 function trackResumedDownload() {
-    gtag('send', 'event', 'Actions', 'ResumeDownloaded', 'linkClicked');
+    gtag('event', 'ResumeDownloaded', {
+        'event_category' : 'header_footer_actions',
+        'event_label' : 'ResumeDownloaded'
+    });            
 }
 
 addMobileFooterTextBoxPanel()
