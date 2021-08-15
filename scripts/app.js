@@ -23,7 +23,7 @@ function onFooterItemClick(option) {
     }
 }
 
-const copyToClipboard = str => {
+function copyToClipBoard(str) {
     str = str || document.getElementById('emailContactBox').value
     const el = document.createElement('textarea');
     el.value = str;
