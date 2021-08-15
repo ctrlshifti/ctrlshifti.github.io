@@ -1,0 +1,50 @@
+@media only screen and (max-width: 600px) {
+    .desktop-only {
+        display: none !important;
+    }
+    .mobile-only {
+        display: initial !important;
+    }    
+    .section-1 {
+        flex-direction: column;
+    }
+    .grid-section .card-container {
+        flex-direction: column;
+    }
+    .grid-section .card {
+        margin-bottom: 50px;
+    }
+    .grid-section .card > div {
+        padding: 0 40px;
+    }
+    .grid-section .section-title .label {
+        margin-bottom: 20px;
+    }
+    .section-5 .skills-container .skill-section {
+        flex: 50%;
+    }
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex !important;
+        flex-direction: column;
+    }
+    .footer .footer-item-container {
+        display: flex !important;
+        flex-direction: row;
+        justify-items: normal;
+        align-content: center;
+        justify-content: space-evenly;  
+        flex-wrap: wrap;
+    }
+    .footer .text-box-container {
+        align-items: center;
+        justify-content: space-evenly;  
+        display: flex;
+    }
+    .footer a {
+        text-decoration: none;
+        color: #FFF;
+    }
+}

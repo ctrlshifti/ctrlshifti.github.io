@@ -44,3 +44,7 @@ body {
 .border-circle {
     border-radius: 50%;
 }
+
+.mobile-only {
+    display: none;
+}
