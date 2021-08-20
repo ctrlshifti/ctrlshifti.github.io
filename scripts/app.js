@@ -55,4 +55,11 @@ function trackResumedDownload() {
     });            
 }
 
+function blogReadClicked(blogTitle) {
+    gtag('event', 'BlogReadClicked', {
+        'event_category' : 'blog_actions',
+        'event_label' : blogTitle
+    });            
+}
+
 addMobileFooterTextBoxPanel()

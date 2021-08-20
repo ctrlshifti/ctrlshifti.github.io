@@ -22,3 +22,8 @@
     color: #E4E7EB;
     text-decoration: none;
 }
+
+.header a, .header a:visited {
+    color: #E4E7EB;
+    text-decoration: none;
+}

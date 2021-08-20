@@ -1,0 +1,67 @@
+.blogs-grid .card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.blogs-grid .card {
+    border: solid 1px #519872;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    flex-basis: auto;
+    text-align: left;
+}
+
+.blogs-grid .card .date-time {
+    color: #519872;
+    display: flex;
+    flex-direction: row;
+    align-content:center;
+    align-items: center;  
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.blogs-grid .card .date-time button {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: #519872;
+    cursor: pointer;
+}
+
+/* blog page css */
+
+.blog-main {
+    color: #adadb2
+}
+
+.blog-main .section-content h3 {
+    font-family: sans-serif;
+    line-height: 50px;
+}
+
+.blog-main .section-content {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.blog-main .date-time p {
+    color: #519872;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .blogs-grid .card-container {
+        flex-direction: column;
+    }
+    .grid-section .blogs-grid .card > div {
+        padding: 0;
+    }
+
+    .blog-main section {
+        width: auto;
+        padding: 20px;
+        overflow: scroll;
+    }
+}

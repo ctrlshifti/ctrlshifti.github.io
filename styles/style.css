@@ -48,3 +48,7 @@ body {
 .mobile-only {
     display: none;
 }
+
+.small-font {
+    font-size: 12px;
+}

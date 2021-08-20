@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generic guide for documenting web projects</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/header.css">
+  <link rel="stylesheet" href="../styles/blog.css">
+  <link rel="stylesheet" href="../styles/prism.css">
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 50px;
+      margin-bottom: 17px;
+    }
+
+    h2 {
+      font-size: 24px;
+      line-height: 1.6;
+      margin: 30px 0 0 0;
+      margin-bottom: 18px;
+      margin-top: 33px;
+    }
+
+    h3 {
+      font-size: 30px;
+      margin: 10px 0 20px 0;
+    }
+
+    header {
+      width: 640px;
+      margin: auto;
+    }
+
+    section {
+      width: 640px;
+      margin: auto;
+    }
+
+    section p {
+      margin-bottom: 27px;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    section img {
+      max-width: 100%;
+    }
+
+    footer {
+      padding: 0 20px;
+      margin: 50px 0;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .aspectRatioPlaceholder {
+      max-width: auto !important;
+      max-height: auto !important;
+    }
+
+    .aspectRatioPlaceholder-fill {
+      padding-bottom: 0 !important;
+    }
+
+    header,
+    section[data-field=subtitle],
+    section[data-field=description] {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header padding primary-bg">
+    <a href="../index.html">
+      <div>❮ Back </div>
+    </a>
+  </div>
+  <article class="h-entry blog-main">
+    <section data-field="body" class="e-content">
+      <section name="afe7" class="section section--body section--first section--last">
+        <div class="section-content">
+          <div class="section-inner sectionLayout--insetColumn">
+            <h3 name="4a1f" id="4a1f" class="graf graf--h3 graf--leading graf--title">A Generic guide for documenting
+              web projects</h3>
+            <div class="date-time">
+              <p class="small-font">
+                Published on Oct 17, 2019 &nbsp; 9 min read
+              </p>
+            </div>
+            <figure name="1952" id="1952" class="graf graf--figure graf-after--h3"><img class="graf-image"
+                data-image-id="1*9KJ6Vv3G2rfQa4kAyViE7w.jpeg" data-width="1920" data-height="1319"
+                data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*9KJ6Vv3G2rfQa4kAyViE7w.jpeg">
+              <figcaption class="imageCaption">Image source : <a href="https://pixabay.com/users/rawpixel-4283981/"
+                  data-href="https://pixabay.com/users/rawpixel-4283981/" class="markup--anchor markup--figure-anchor"
+                  rel="noopener" target="_blank">https://pixabay.com/users/rawpixel-4283981/</a></figcaption>
+            </figure>
+            <p name="78d8" id="78d8" class="graf graf--p graf-after--figure">Incase you are in a hurry, and dont want to
+              refer the entire post, here’s a quick link to a sample README.md file created following the below guide :
+            </p>
+            <div name="0148" id="0148" class="graf graf--mixtapeEmbed graf-after--p"><a
+                href="https://github.com/ctrlshifti/WEB_README_SAMPLE/blob/master/README.md"
+                data-href="https://github.com/ctrlshifti/WEB_README_SAMPLE/blob/master/README.md"
+                class="markup--anchor markup--mixtapeEmbed-anchor"
+                title="https://github.com/ctrlshifti/WEB_README_SAMPLE/blob/master/README.md"><strong
+                  class="markup--strong markup--mixtapeEmbed-strong">ctrlshifti/WEB_README_SAMPLE</strong><br><em
+                  class="markup--em markup--mixtapeEmbed-em">App Name : ABC Rocket Customer : SOME_ABC Company Pvt Ltd
+                  Development Team : John Dev (Android developer : May 2018 …</em>github.com</a><a
+                href="https://github.com/ctrlshifti/WEB_README_SAMPLE/blob/master/README.md"
+                class="js-mixtapeImage mixtapeImage u-ignoreBlock" data-media-id="c822fff6ebef29134adfd2a9acde2387"
+                data-thumbnail-img-id="0*sq0aO9s8lX9WNbJe"
+                style="background-image: url(https://cdn-images-1.medium.com/fit/c/160/160/0*sq0aO9s8lX9WNbJe);"></a>
+            </div>
+            <p name="20b4" id="20b4" class="graf graf--p graf-after--mixtapeEmbed">I would still advise to go through
+              the post first.</p>
+            <p name="f7b6" id="f7b6" class="graf graf--p graf-after--p"><strong
+                class="markup--strong markup--p-strong">What is this post about ?</strong></p>
+            <p name="4b81" id="4b81" class="graf graf--p graf-after--p">This post is all about documenting a web
+              project, by document i mean the series of steps required to get a web project running from its source code
+              available in its Git repository to a latest run-able version of the project.</p>
+            <p name="5433" id="5433" class="graf graf--p graf-after--p">This post will basically serve as a guide to
+              suggest the various information that is needed to be included in the project document for a web project.
+            </p>
+            <p name="cd49" id="cd49" class="graf graf--p graf-after--p">Every project document will have a number of
+              steps which can be broadly categorised in two parts :</p>
+            <ol class="postList">
+              <li name="822f" id="822f" class="graf graf--li graf-after--p">General information required for documenting
+                any software project.</li>
+              <li name="4b24" id="4b24" class="graf graf--li graf-after--li">Project specific steps, information
+                relevant to the specific project.</li>
+            </ol>
+            <p name="6180" id="6180" class="graf graf--p graf-after--li"><strong
+                class="markup--strong markup--p-strong">Why should we document a project ?</strong></p>
+            <p name="c642" id="c642" class="graf graf--p graf-after--p">During the lifetime of a software project, the
+              team working on it will change on various occasions due to various reasons, therefore the project specific
+              knowledge gained overtime by the developers entering the team throughout its lifetime will be lost, when
+              the developers are switched.</p>
+            <p name="e77c" id="e77c" class="graf graf--p graf-after--p">When a new developer is added to the project, he
+              is left with a codebase with no proper set of instruction on how to run it.</p>
+            <p name="3d23" id="3d23" class="graf graf--p graf-after--p">Therefore he is now forced to get in contact
+              with the earlier developers.</p>
+            <p name="7084" id="7084" class="graf graf--p graf-after--p">in case if no one is working on the project at
+              that time this may not be possible if the existing team has left the organisation,</p>
+            <p name="43bd" id="43bd" class="graf graf--p graf-after--p">Or get a detailed session from an existing
+              developer regarding the project setup / build generation aspects etc from any existing team member, there
+              by consuming their time.</p>
+            <p name="8533" id="8533" class="graf graf--p graf-after--p">Also in case if you are a developer at the other
+              end of the story, ie. a developer who has to handover the project to a junior or you are planning to leave
+              the organisation, documenting the project will make life easier for you. When a new developer joins the
+              project all that has to be done is give him access to the source code, and ask him to refer the
+              documentation.</p>
+            <p name="d028" id="d028" class="graf graf--p graf-after--p"><strong
+                class="markup--strong markup--p-strong">Even after doing the above, if he/she still has doubts only then
+                the intervention of an existing team member is required.</strong></p>
+            <p name="b2bc" id="b2bc" class="graf graf--p graf-after--p"><strong
+                class="markup--strong markup--p-strong">Where should the document be placed ?</strong></p>
+            <p name="e051" id="e051" class="graf graf--p graf-after--p">The document should be placed together with the
+              project codebase.</p>
+            <p name="bd22" id="bd22" class="graf graf--p graf-after--p">In case the project is maintained in git the
+              project document can be maintained as a README.md file in the root branch of the project’s git repository,
+              so that any developer added to the project will first check the document before cloning its source.</p>
+            <p name="0de8" id="0de8" class="graf graf--p graf-after--p">In case if it is maintained in SVN or any other
+              file based versioning system, the documentation file should be kept in the root folder of the project with
+              a relevant name containing keywords such as : <strong
+                class="markup--strong markup--p-strong">instructions, README, SETUP </strong>etc.</p>
+            <p name="9d84" id="9d84" class="graf graf--p graf-after--p"><strong
+                class="markup--strong markup--p-strong">Is this a one time process ?</strong></p>
+            <p name="2956" id="2956" class="graf graf--p graf-after--p"><strong
+                class="markup--strong markup--p-strong">NO, </strong>the steps required to maintain / run a project from
+              its source or to build an executable / production output file will update over time during the project’s
+              lifetime, therefore the documentation which reflects the same also need to be upgraded when this happens.
+            </p>
+            <p name="59b4" id="59b4" class="graf graf--p graf-after--p"><strong
+                class="markup--strong markup--p-strong">How do i validate the documentation i created for my
+                project ?</strong></p>
+            <p name="e056" id="e056" class="graf graf--p graf-after--p">A project documentation is like a recipe to
+              prepare a food dish, you start with the raw materials :</p>
+            <ol class="postList">
+              <li name="698f" id="698f" class="graf graf--li graf-after--p">The source code of the project in case of a
+                software project</li>
+              <li name="2458" id="2458" class="graf graf--li graf-after--li">The raw materials, such as spices,
+                condiments, grains and meat in case of a food dish</li>
+            </ol>
+            <p name="96b2" id="96b2" class="graf graf--p graf-after--li">We then follow the recipe till we get the
+              output:</p>
+            <ol class="postList">
+              <li name="cab5" id="cab5" class="graf graf--li graf-after--p">A running project in case of a software
+                project.</li>
+              <li name="9dbb" id="9dbb" class="graf graf--li graf-after--li">A delicious serving in case of a food dish.
+              </li>
+            </ol>
+            <p name="8fbd" id="8fbd" class="graf graf--p graf-after--li">Validating a project document is therefore same
+              as validating a food recipe, follow it as if you are the person it is written for. if you can follow it
+              till the end and get the desired results, without getting stuck, the document is valid.</p>
+            <p name="7659" id="7659" class="graf graf--p graf-after--p"><strong
+                class="markup--strong markup--p-strong">what are the rules / language / syntax to write a project
+                document ?</strong></p>
+            <p name="8288" id="8288" class="graf graf--p graf-after--p">There are various frameworks and tools designed
+              specifically for the purpose of documenting a software project, but these are usually bulky and have a
+              learning curve of their own.</p>
+            <p name="1768" id="1768" class="graf graf--p graf-after--p">I believe that documentation should be like a
+              good story: simple, beautiful and easy to absorb.</p>
+            <p name="5eab" id="5eab" class="graf graf--p graf-after--p">Therefore for small to medium sized projects we
+              can document it as simple text instructions and code snippets / commands itself spanning from a single
+              file to a few separate files to the maximum.</p>
+            <p name="1645" id="1645" class="graf graf--p graf-after--p">For projects hosted on git, almost all git
+              servers support <a href="https://en.wikipedia.org/wiki/Markdown"
+                data-href="https://en.wikipedia.org/wiki/Markdown" class="markup--anchor markup--p-anchor"
+                rel="noopener" target="_blank"><strong
+                  class="markup--strong markup--p-strong">Markdown</strong></a><strong
+                class="markup--strong markup--p-strong">, </strong>a <a
+                href="https://en.wikipedia.org/wiki/Lightweight_markup_language"
+                data-href="https://en.wikipedia.org/wiki/Lightweight_markup_language"
+                class="markup--anchor markup--p-anchor" title="Lightweight markup language" rel="noopener"
+                target="_blank">lightweight markup language</a> with plain text formatting syntax.</p>
+            <p name="9aa8" id="9aa8" class="graf graf--p graf-after--p">This is a very convenient way of documenting
+              notes, code snippets commands, screenshots, links etc all of which will usually be part of your
+              documentation.</p>
+            <p name="a7af" id="a7af" class="graf graf--p graf-after--p">Please refer <a
+                href="https://www.markdownguide.org/" data-href="https://www.markdownguide.org/"
+                class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong
+                  class="markup--strong markup--p-strong">this</strong></a> for a detailed guide about markdown.</p>
+            <p name="3e51" id="3e51" class="graf graf--p graf-after--p">Also you can use <a
+                href="https://stackedit.io/app#" data-href="https://stackedit.io/app#"
+                class="markup--anchor markup--p-anchor" rel="noopener" target="_blank"><strong
+                  class="markup--strong markup--p-strong">this WYSIWYG markdown editor</strong></a> for writing
+              documentation easily.</p>
+            <p name="d8af" id="d8af" class="graf graf--p graf-after--p">Without further ado let’s dive into the actual
+              contents of a project document.</p>
+            <ol class="postList">
+              <li name="d1c6" id="d1c6" class="graf graf--li graf-after--p"><strong
+                  class="markup--strong markup--li-strong">Begin your documentation with a welcome note.</strong></li>
+            </ol>
+            <pre name="21b9" id="21b9" class="graf graf--pre graf-after--li">
+              <code>Welcome to XYZProject</code></pre>
+            <p name="1f3e" id="1f3e" class="graf graf--p graf-after--pre">this would better be in the biggest heading.
+            </p>
+            <p name="5df4" id="5df4" class="graf graf--p graf-after--p"><strong
+                class="markup--strong markup--p-strong">2) App or Organisation logo</strong></p>
+            <p name="5489" id="5489" class="graf graf--p graf-after--p"><strong
+                class="markup--strong markup--p-strong">3) Give an overview about your project</strong></p>
+            <p name="cbc7" id="cbc7" class="graf graf--p graf-after--p">This section should contain a one to two line
+              non technical overview of your project</p>
+            <pre name="637d" id="637d" class="graf graf--pre graf-after--p">
+              <code>
+  A SOME_ABC Company Pvt Ltd employee management app
+              </code></pre>
+            <p name="1f31" id="1f31" class="graf graf--p graf-after--pre"><strong
+                class="markup--strong markup--p-strong">4) App and team information</strong></p>
+            <pre name="9308" id="9308" class="graf graf--pre graf-after--p">
+              <code>
+  App Name : ABC Rocket
+  Customer : SOME_ABC Company Pvt Ltd
+  Development Team : 
+  John Dev (Android developer : May 2018 - June 2019), 
+  Jane Dev (Android developer : June 2019 - till date), 
+  Jonah Dev (Backend developer : May 2016 - till date)
+  Design Team : Wan Chung, Lee Chi
+  Management : Nikola Tisola (Sr Manger : May 2012 - June 2016), 
+               Thomas Eden (Sr Manger : July2016 - till date)
+  Web URL : http://ROCKETAPP.SOMECOMPANY.COM
+              </code>
+            </pre>
+            <p name="f314" id="f314" class="graf graf--p graf-after--pre"><strong
+                class="markup--strong markup--p-strong">5) About document File</strong></p>
+            <p name="e9e2" id="e9e2" class="graf graf--p graf-after--p">This section gives the importance of maintaining
+              the current documentation file and general instructions related to the documentation file.</p>
+            <pre name="848d" id="848d"
+              class="graf graf--pre graf-after--p"><strong class="markup--strong markup--pre-strong">About this file<br></strong>The purpose of this file is to provide overview, 
+setup instructions and background information of the project. 
+If you have joined this project as a part of the development team, 
+please ensure this file is up to date.<br><br>
+<strong class="markup--strong markup--pre-strong">
+  
+Note : Any dependencies added / modified to this project 
+which affect the running of the code in this git repository 
+must be listed in this file. 
+All developers must ensure that the instructions mentioned in this file 
+are sufficient to enable a new developer to obtain a executable copy 
+of the lastest code in this repository, 
+without invlvement from any other human assistance.</strong></pre>
+            <p name="6612" id="6612" class="graf graf--p graf-after--pre"><strong
+                class="markup--strong markup--p-strong">6) Tools and Hardware Requirements Declaration</strong></p>
+            <p name="60ae" id="60ae" class="graf graf--p graf-after--p">This section is basically a checklist of the
+              minimum hardware and software tools etc which are required for running the project</p>
+            <pre name="e0ef" id="e0ef"
+              class="graf graf--pre graf-after--p">I) Software requirements<br>   1) Ubuntu OS<br>   2) Maven<br>   3) JDK<br>   4) Camera drivers<br>   5) Web Cam Device<br>   6) Http Server<br>   7) MySQL and MySQL drivers<br>II) Hardware requirements<br>   1) Minimum 8 GB RAM<br>   2) Minimum 12 GB Available Disk Space<br>   3) Wifi Availablility<br>   4) Web Camera</pre>
+            <p name="5ef5" id="5ef5" class="graf graf--p graf-after--pre"><strong
+                class="markup--strong markup--p-strong">7) Project Technical Specifications</strong></p>
+            <p name="1fb2" id="1fb2" class="graf graf--p graf-after--p">This section is basically a high level overview
+              of the technologies used in the project and steps involved in generating the final builds for the project
+            </p>
+            <pre name="b4bb" id="b4bb"
+              class="graf graf--pre graf-after--p">* This project is a cordova based project which uses Angular 7
+framework.<br>* The angular code is first compiled using angular-cli commands,  <br>  
+then the output is moved to the cordova www directory. After which <br>  
+the cordova build command generates final android / iOS output.   <br>
+* The API is provided from customer<br>
+* The design for reference is from XYZ Company Pvt Ltd Mumbai design  <br> 
+Team.</pre>
+            <p name="dbe0" id="dbe0" class="graf graf--p graf-after--pre"><strong
+                class="markup--strong markup--p-strong">8) Setup Instructions</strong></p>
+            <p name="1c92" id="1c92" class="graf graf--p graf-after--p">This covers the actual setup of the project from
+              fetching the source code, installing the dependencies, setting up environments, build generation etc.</p>
+            <p name="b90a" id="b90a" class="graf graf--p graf-after--p">This section can become huge and can be saved in
+              a separate <strong class="markup--strong markup--p-strong">SETUP.md </strong>file if necessary. The link
+              for which must be given in the main <strong class="markup--strong markup--p-strong">README.md</strong>
+              file.</p>
+            <h3 name="c6dd" id="c6dd" class="graf graf--h3 graf-after--p"><strong
+                class="markup--strong markup--h3-strong">ALL OF THE SUB SECTIONS MENTIONED BELOW MIGHT NOT APPLY TO YOUR
+                PROJECT INCLUDE THEM AS PER YOUR DISCRETION.</strong></h3>
+            <pre name="895d" id="895d"
+              class="graf graf--pre graf-after--h3"><strong class="markup--strong markup--pre-strong">Setup Instructions</strong><br>
+As mentioned earlier , 
+this is a cordova-angular project,<br>
+The below mentioned steps may vary significantly 
+across various operating systems, 
+please follow them accordingly.</pre>
+            <pre name="fa14" id="fa14"
+              class="graf graf--pre graf-after--pre">
+These instructions are aimed at a developer 
+who has been added to the project team, 
+after the project development has already been initiated,</pre>
+            <pre name="1494" id="1494"
+              class="graf graf--pre graf-after--pre">
+Therefore the aim is to get the code 
+from the git repository to run on the developer&#39;s system, 
+so as to allow him / her to continue with further development.</pre>
+            <p name="430f" id="430f" class="graf graf--p graf-after--pre"><strong
+                class="markup--strong markup--p-strong">8.1) Fetching git code to local system</strong></p>
+            <p name="ace0" id="ace0" class="graf graf--p graf-after--p">This section must include the commands required
+              to fetch the source code from the git repository, Once this is done, then the commands required to
+              checkout the proper branch on which the developer needs to continue working.</p>
+            <pre name="21a2" id="21a2"
+              class="graf graf--pre graf-after--p"><strong class="markup--strong markup--pre-strong">Clone the repository from GitLab :</strong><br>git clone git@gitserver.abccompanygit.com:root/rocket.git</pre>
+            <pre name="7df4" id="7df4"
+              class="graf graf--pre graf-after--pre"><strong class="markup--strong markup--pre-strong">Change current working directory to Project directory<br></strong>cd Rocket</pre>
+            <pre name="9c45" id="9c45"
+              class="graf graf--pre graf-after--pre">( This is the cordova as well as the angular root folder. )</pre>
+            <pre name="73e5" id="73e5"
+              class="graf graf--pre graf-after--pre"><strong class="markup--strong markup--pre-strong">Checking out the latest development branch</strong></pre>
+            <pre name="19b6" id="19b6"
+              class="graf graf--pre graf-after--pre">As of writing this guide the main branch used for development is : develop<br>To switch to this branch : git checkout develop</pre>
+            <p name="7fa1" id="7fa1" class="graf graf--p graf-after--pre"><strong
+                class="markup--strong markup--p-strong">8.2) Installing project specific dependency packages and
+                tools</strong></p>
+            <p name="927e" id="927e" class="graf graf--p graf-after--p"><strong
+                class="markup--strong markup--p-strong">INCASE ANY SPECIFIC VERSIONS OF A TOOL / DEPENDENCY ARE REQUIRED
+                AND THE PROJECT DOES NOT BUILD / WORK PROPERLY WITH LATEST VERSIONS OF A DEPENDENCY, MENTION THESE
+                INLINE ALONG WITH THE COMMANDS TO INSTALL THE DEPENDENCIES</strong></p>
+            <pre name="170a" id="170a"
+              class="graf graf--pre graf-after--p"><strong class="markup--strong markup--pre-strong">Installing dependencies</strong><br>This project requires cordova for running,</pre>
+            <pre name="6de3" id="6de3"
+              class="graf graf--pre graf-after--pre">You can install it by referring to the official cordova page : [<a href="https://cordova.apache.org/" data-href="https://cordova.apache.org/" class="markup--anchor markup--pre-anchor" rel="nofollow noopener" target="_blank">https://cordova.apache.org/</a>]</pre>
+            <pre name="1eae" id="1eae"
+              class="graf graf--pre graf-after--pre">The cordova version used at the time of writing this file is : 8.1.2</pre>
+            <pre name="2729" id="2729"
+              class="graf graf--pre graf-after--pre">You can check the installed version using cordova -v</pre>
+            <pre name="5c48" id="5c48"
+              class="graf graf--pre graf-after--pre">The config.xml file contains the list of all cordova plugins and platforms used for this project.</pre>
+            <pre name="59f4" id="59f4"
+              class="graf graf--pre graf-after--pre">Please ensure this file is updated incase any plugin is added / removed.</pre>
+            <pre name="7012" id="7012"
+              class="graf graf--pre graf-after--pre">Please follow below steps for installation :</pre>
+            <pre name="ffba" id="ffba"
+              class="graf graf--pre graf-after--pre">Install Angular and Cordova NPM Dependencies</pre>
+            <pre name="f642" id="f642" class="graf graf--pre graf-after--pre">npm i</pre>
+            <pre name="4adf" id="4adf"
+              class="graf graf--pre graf-after--pre">Next install cordova platforms and plugins</pre>
+            <pre name="3a52" id="3a52" class="graf graf--pre graf-after--pre">cordova prepare</pre>
+            <pre name="6571" id="6571"
+              class="graf graf--pre graf-after--pre">Incase you get errors as : Current working directory is not a Cordova-based project.</pre>
+            <pre name="f6a9" id="f6a9"
+              class="graf graf--pre graf-after--pre">The www folder used by cordova cli to detect a cordova project might be missing</pre>
+            <pre name="4c0a" id="4c0a"
+              class="graf graf--pre graf-after--pre">Simply make an empty www folder via file manager or via commandline as :</pre>
+            <pre name="5059" id="5059" class="graf graf--pre graf-after--pre">mkdir www</pre>
+            <pre name="c753" id="c753"
+              class="graf graf--pre graf-after--pre">Install cordova android platform<br>cordova platform add android</pre>
+            <p name="68c8" id="68c8" class="graf graf--p graf-after--pre"><strong
+                class="markup--strong markup--p-strong">8.3) Commands / Instructions for starting a server / OS service
+                required by the project to run etc</strong></p>
+            <pre name="e210" id="e210"
+              class="graf graf--pre graf-after--p"><strong class="markup--strong markup--pre-strong">Start the http and mysql xampp server :</strong><br>xampp http start<br>xampp mysql start<br><strong class="markup--strong markup--pre-strong">Start kurento media server<br></strong>sudo service kurento-media-server-6.0 start<br><br></pre>
+            <p name="727e" id="727e" class="graf graf--p graf-after--pre"><strong
+                class="markup--strong markup--p-strong">9) Build generation commands / Instructions</strong></p>
+            <p name="1433" id="1433" class="graf graf--p graf-after--p">These commands and instructions will utilize the
+              tools and dependencies installed above and generate the output files from the source code, such as
+              an <strong class="markup--strong markup--p-strong">.apk</strong> or <strong
+                class="markup--strong markup--p-strong">.ipa</strong> file or a <strong
+                class="markup--strong markup--p-strong">dist </strong>folder containing minified web code ready for
+              deployment.</p>
+            <p name="e215" id="e215" class="graf graf--p graf-after--p"><strong
+                class="markup--strong markup--p-strong">10) Build environment information and switching
+                information</strong></p>
+            <p name="d659" id="d659" class="graf graf--p graf-after--p">This section contains a detailed list of
+              information or a reference to the same, giving details about various development environments such as UAT,
+              DEVELOPMENT, PRODUCTION etc.</p>
+            <p name="6166" id="6166" class="graf graf--p graf-after--p">These should also have instructions for
+              switching between the various environments.</p>
+            <p name="d844" id="d844" class="graf graf--p graf-after--p">Eg. Once a developer generates a build for UAT
+              environment and is tested and approved by QA team for deploying to production, this section must provide
+              steps for switching the API endpoints to Production URLS, KEYS to be used in production etc</p>
+            <p name="0d53" id="0d53" class="graf graf--p graf-after--p"><strong
+                class="markup--strong markup--p-strong">11) White labelling instructions</strong></p>
+            <p name="cb28" id="cb28" class="graf graf--p graf-after--p">In case the project you are working on is a
+              white label project, ie. The same software product is used for multiple customers, then the documentation
+              must include details pointing out the code level differences between two instances of the same project,
+              features enabled / disabled for specific instances, instance specific details. Steps to create a new
+              instance from existing instances etc.</p>
+            <p name="657c" id="657c" class="graf graf--p graf-after--p"><strong
+                class="markup--strong markup--p-strong">12) Deployment steps</strong></p>
+            <p name="7089" id="7089" class="graf graf--p graf-after--p">Details related to the platform on which the
+              final software product is deployed, eg. Android Play Store or Apple App Store or a web server.</p>
+            <p name="bcef" id="bcef" class="graf graf--p graf-after--p">Such as references to login credentials, file
+              server paths etc.</p>
+            <h3 name="6032" id="6032" class="graf graf--h3 graf-after--p"><strong
+                class="markup--strong markup--h3-strong">NEVER STORE LOGIN CREDENTIALS OR OTHER SENSITIVE INFORMATION IN
+                GIT README FILES,</strong></h3>
+            <h3 name="991b" id="991b" class="graf graf--h3 graf-after--h3"><strong
+                class="markup--strong markup--h3-strong">README FILES ARE ACCESSIBLE TO ALL USERS WHO HAVE BEEN GIVEN
+                ACCESS TO THE GIT REPOSITORY.</strong></h3>
+            <h3 name="9151" id="9151" class="graf graf--h3 graf-after--h3"><strong
+                class="markup--strong markup--h3-strong">HOWEVER NOT ALL USERS ARE AUTHORISED TO UTILISE THEM. THIS
+                MIGHT LEAD TO PURPOSEFUL OR UN PURPOSEFUL DATA / PROPERTY LOSS ON PRODUCTION ENVIRONMENTS.</strong></h3>
+            <h3 name="d726" id="d726" class="graf graf--h3 graf-after--h3"><strong
+                class="markup--strong markup--h3-strong">MENTION ONLY THE DETAILS OF PERSONNEL / DEPARTMENT WHO HAVE
+                AUTHORITY TO PROVIDE SUCH CREDENTIALS IN THE README ONLY</strong></h3>
+            <p name="b659" id="b659" class="graf graf--p graf-after--h3"><strong
+                class="markup--strong markup--p-strong">13) Unit Testing or Basic testing steps</strong></p>
+            <p name="e27f" id="e27f" class="graf graf--p graf-after--p">Once the developer has finished setup, he would
+              want to verify the setup process, by running the application in local or test mode.</p>
+            <p name="6671" id="6671" class="graf graf--p graf-after--p">The documentation should therefore contain links
+              to the outputs such as file system paths of the generated build or web url for a web app.</p>
+            <p name="1df4" id="1df4" class="graf graf--p graf-after--p"><strong
+                class="markup--strong markup--p-strong">14) Notes for future maintainers</strong></p>
+            <p name="f65e" id="f65e" class="graf graf--p graf-after--p">This section must contain instructions aimed at
+              developers from future point of view, such as advice on writing future code, installing new dependencies
+              etc.</p>
+            <p name="d51e" id="d51e" class="graf graf--p graf-after--p"><strong
+                class="markup--strong markup--p-strong">15) References</strong></p>
+            <p name="7054" id="7054" class="graf graf--p graf-after--p">This section contains mostly links to non source
+              code resources such as Application Design References, Wireframes, Requirement Documents, Existing
+              Apllications, Demos, etc</p>
+            <p name="22f6" id="22f6" class="graf graf--p graf-after--p">For a sample README.md file created using the
+              above guide refer :</p>
+            <p name="0285" id="0285" class="graf graf--p graf-after--p graf--trailing"><a
+                href="https://github.com/ctrlshifti/WEB_README_SAMPLE/blob/master/README.md"
+                data-href="https://github.com/ctrlshifti/WEB_README_SAMPLE/blob/master/README.md"
+                class="markup--anchor markup--p-anchor" rel="noopener"
+                target="_blank">https://github.com/ctrlshifti/WEB_README_SAMPLE/blob/master/README.md</a></p>
+          </div>
+        </div>
+      </section>
+    </section>
+    <footer>
+      <p>By <a href="https://medium.com/@ctrlshifti" class="p-author h-card">t1tan1um</a> on <a
+          href="https://medium.com/p/4d6110557e4b"><time class="dt-published"
+            datetime="2019-10-17T13:28:59.881Z">October 17, 2019</time></a>.</p>
+      <p><a href="https://medium.com/@ctrlshifti/generic-guide-for-documenting-web-projects-4d6110557e4b"
+          class="p-canonical">Canonical link</a></p>
+      <p>Exported from <a href="https://medium.com">Medium</a> on August 20, 2021.</p>
+    </footer>
+  </article>
+  <script src="../scripts/prism.js"></script>
+</body>
+
+</html>
