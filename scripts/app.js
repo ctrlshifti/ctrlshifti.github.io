@@ -63,3 +63,5 @@ function blogReadClicked(blogTitle) {
 }
 
 addMobileFooterTextBoxPanel()
+
+console.log("Itna bada hogya... Byah nahi hua tumhara ???")
