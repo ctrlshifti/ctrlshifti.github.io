@@ -1,4 +1,5 @@
 var textBoxPanel = document.createElement('template');
+var clickedWatches = []
 function addMobileFooterTextBoxPanel() {
     var textBoxPanel = document.createElement('template');
     textBoxPanel.innerHTML = `<div class="text-box-container padding-bottom">
@@ -64,9 +65,17 @@ function blogReadClicked(blogTitle) {
 
 function flipWatch(watchBtn) {
     var watch = watchBtn.parentElement.children[0]
+    var clickedWatch = watchBtn.parentElement.children[1].innerText
     var watchUrlSections = watch.src.split('/')
     watchUrlSections[watchUrlSections.length-1] = (watchUrlSections[watchUrlSections.length-1] === 'front.png') ? 'back.png' : 'front.png'
     watch.src = watchUrlSections.join('/')
+    if(clickedWatches.indexOf(clickedWatch) == -1) {
+        gtag('event', 'WatchToggleClicked', {
+            'event_category' : 'watch_flip',
+            'event_label' : clickedWatch
+        });         
+        clickedWatches.push(clickedWatch)
+    }
 }
 
 addMobileFooterTextBoxPanel()
