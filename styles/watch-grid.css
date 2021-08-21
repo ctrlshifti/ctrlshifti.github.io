@@ -1,0 +1,21 @@
+.watch-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.watch-grid .watch-card img {
+    max-height: 200px;
+}
+
+.watch-grid .watch-card button {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: #519872;
+    cursor: pointer;
+}
+
+.watch-grid .watch-card {
+    flex: 30%;
+}

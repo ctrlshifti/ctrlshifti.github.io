@@ -62,6 +62,13 @@ function blogReadClicked(blogTitle) {
     });            
 }
 
+function flipWatch(watchBtn) {
+    var watch = watchBtn.parentElement.children[0]
+    var watchUrlSections = watch.src.split('/')
+    watchUrlSections[watchUrlSections.length-1] = (watchUrlSections[watchUrlSections.length-1] === 'front.png') ? 'back.png' : 'front.png'
+    watch.src = watchUrlSections.join('/')
+}
+
 addMobileFooterTextBoxPanel()
 
 console.log("Itna bada hogya... Byah nahi hua tumhara ???")
