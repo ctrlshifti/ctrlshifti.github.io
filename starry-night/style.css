@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    padding: 600px;
+}
+
+.content {
+    position: relative;
+    padding: 500px;
+}
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.sun {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mercury-axis {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -80px;
+    animation-delay: 3s !important;
+    border: solid 1px #FFF;
+}
+
+.mercury {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+}
+
+.venus-axis {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+    animation-delay: 6s !important;
+    border: solid 1px #FFF;
+    border-radius: 50%;
+}
+
+.venus {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 30px; 
+}
+
+.earth-axis {
+    height: 450px;
+    width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -225px;
+    margin-left: -225px;
+    animation-delay: 9s !important;
+    border: solid 1px #FFF;
+    border-radius: 50%;    
+}
+
+.earth {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 80px; 
+}
+
+.mars-axis {
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -300px;
+    animation-delay: 1s !important;
+    border: solid 1px #FFF;
+    border-radius: 50%;        
+}
+
+.mars {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 150px; 
+}
+
+.jupiter-axis {
+    height: 760px;
+    width: 760px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -380px;
+    margin-left: -380px;
+    animation-delay: 3s !important;
+    border: solid 1px #FFF;
+    border-radius: 50%;            
+}
+
+.jupiter {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 170px; 
+}
+
+.saturn-axis {
+    height: 950px;
+    width: 950px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -475px;
+    margin-left: -475px;
+    animation-delay: 2s !important;
+    border: solid 1px #FFF;
+    border-radius: 50%;          
+}
+
+.saturn {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 220px; 
+}
+
+.uranus-axis {
+    height: 1120px;
+    width: 1120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -560px;
+    margin-left: -560px;
+    animation-delay: 1s !important;
+    border: solid 1px #FFF;
+    border-radius: 50%;           
+}
+
+.uranus {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 370px; 
+}
+
+.neptune-axis {
+    height: 1280px;
+    width: 1280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -625px;
+    margin-left: -625px;
+    animation-delay: 3s !important;
+    border: solid 1px #FFF;
+    border-radius: 50%;            
+}
+
+.neptune {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 440px; 
+}
+
+.clickable {
+    cursor: pointer;
+    z-index: 50;
+}
+
+@keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rotating-1x {
+    -webkit-animation: rotating 60s linear infinite;
+    -moz-animation: rotating 60s linear infinite;
+    -ms-animation: rotating 60s linear infinite;
+    -o-animation: rotating 60s linear infinite;
+    animation: rotating 60s linear infinite;
+  }
+
+  .rotating-2x {
+    -webkit-animation: rotating 120s linear infinite;
+    -moz-animation: rotating 120s linear infinite;
+    -ms-animation: rotating 120s linear infinite;
+    -o-animation: rotating 120s linear infinite;
+    animation: rotating 120s linear infinite;
+  }
+
+  .rotating-3x {
+    -webkit-animation: rotating 180s linear infinite;
+    -moz-animation: rotating 180s linear infinite;
+    -ms-animation: rotating 180s linear infinite;
+    -o-animation: rotating 180s linear infinite;
+    animation: rotating 180s linear infinite;
+  }
